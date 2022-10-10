@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Roboto Slab', serif;
+
+    --color1: black;
+    --color2: white;
+    --color3: rgb(12, 52, 12);
+    --color4: green;
+    --color5: red;
+}
+
+body {
+    width: 100vmax;
+    height: 100vmax;
+    background-color: var(--color1);
+}
+
+h1 {
+    font-family: 'Cinzel Decorative', cursive;
+}
