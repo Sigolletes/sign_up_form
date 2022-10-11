@@ -10,9 +10,10 @@
 
     --color1: black;
     --color2: white;
-    --color3: rgb(12, 52, 12);
+    --color3: rgb(234, 221, 195);
     --color4: green;
     --color5: red;
+    --color6: rgb(14, 47, 89);
 }
 
 body {
@@ -41,7 +42,7 @@ body {
 #logo {
     background-color: rgba(96, 153, 228, 0.40);
     width: 100%;
-    height: 12vh;
+    height: clamp(35px, 11vw, 120px);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -51,17 +52,17 @@ body {
 }
 
 #logo img {
-    width: 8vw;
+    width: clamp(23px, 8vw, 80px);
     height: auto;
 }
 
 h1 {
     font-family: 'Cinzel Decorative', cursive;
-    font-size: 4vw;
+    font-size: clamp(15px, 4vw, 50px);
 }
 
 #photo p {
-    background-color: rgba(96, 153, 228, 0.60);
+    background-color: rgba(96, 153, 228, 0.40);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,7 +76,67 @@ h1 {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: rgb(14, 47, 89);
-
+    background-color: var(--color6);
+    color: var(--color3);
+    padding: 7% 5%;
+    gap: 2vh;
 }
 
+h3 {
+    font-size: clamp(15px, 1.3vw, 20px);
+}
+
+#info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh 1vw 4vh 1vw;
+    gap: 3vh;
+    margin-top: 3vh;
+    border-radius: 1vh;
+    border: 4px double var(--color3);
+    font-size: clamp(13px, 1.3vw, 20px);
+}
+
+#info legend {
+    font-size: clamp(15px, 1.3vw, 20px);
+}
+
+.inputDiv {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;
+}
+
+input {
+    padding: clamp(2px, 1vh, 8px);;
+    background-color: var(--color3);
+    border-radius: 1vh;
+}
+
+#button {
+    border: none;
+    margin-top: 4vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;
+    font-size: clamp(13px, 1.3vw, 20px);
+}
+
+#submit {
+    font-size: clamp(13px, 1.3vw, 20px);
+    padding: 1vh 1vw;
+    border-radius: 1vh;
+    background-color: rgb(171, 134, 61);
+}
+
+a {
+    color: rgb(171, 134, 61);
+}
