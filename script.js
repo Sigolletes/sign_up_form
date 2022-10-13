@@ -1,18 +1,41 @@
-let 
+const   
+    alertInfo = document.querySelector("#alertInfo"),
+    submitButton = document.querySelector("#submitButton"),
+    firstName = document.querySelector("#name"),
+    lastName = document.querySelector("#lastName"),
+    email = document.querySelector("#email"),
+    phone = document.querySelector("#phone"),
     password = document.querySelector("#password"),
     confirmPassword = document.querySelector("#confirmPassword");
 
-const   
-    alertInfo = document.querySelector("#alertInfo"),
-    submitButton = document.querySelector("#submitButton");
-
 function matchPassword() {
-    if (password !== confirmPassword) {
-        alertInfo.textContent("The passwords aren't the same");
-    } 
+    if (password.value !== confirmPassword.value) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+function validation() {
+    if (firstName.checkValidity() && lastName.checkValidity() && email.checkValidity() && phone.checkValidity() && password.checkValidity() && confirmPassword.checkValidity()) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 submitButton.addEventListener("click", () => {
-    submitButton.preventDefault();
-    matchPassword();
+
+    let pass = matchPassword();
+    let check = validation();
+
+    if (check === true && pass === true) {
+        alertInfo.innerText = "The account was created";
+    } else if (check === false && pass === false) {
+        alertInfo.textContent = "Fulfill all the required parameters";
+    } else if (check === true && pass === false) {
+        alertInfo.innerHTML = "The passwords aren't the same";
+    } else {
+        alertInfo.textContent = "Fulfill all the required parameters";
+    }
 });

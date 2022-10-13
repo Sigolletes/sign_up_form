@@ -175,4 +175,6 @@ a {
     color: rgb(204, 143, 21);
 }
 
-
+h5 {
+    font-size: clamp(20px, 2vw, 50px);
+}

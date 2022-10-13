@@ -54,12 +54,12 @@
 
                 <div class="inputDiv">
                     <label for="phone">PHONE NUMBER</label>
-                    <input type="tel" id="phone" name="phone" placeholder="0000000000" pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$">
+                    <input type="tel" id="phone" name="phone" placeholder="000 000 0000" pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$">
                 </div>
 
                 <div class="inputDiv">
                     <label for="password">PASSWORD *</label>
-                    <input type="password" id="password" name="password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" placeholder="Min 8 with num upp low & special" required>
+                    <input type="password" id="password" name="password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" placeholder="Min 8 with a number" required>
                 </div>
 
                 <div class="inputDiv">
@@ -69,9 +69,9 @@
             </fieldset>
 
             <fieldset name="button" id="button">
-                <button type="submit" id="submitButton">Create Account</button>
+                <button type="button" id="submitButton">Create Account</button>
 
-                <h5 id="alertInfo"></h5>
+                <h5 id="alertInfo">text</h5>
 
                 <p>Already have an account? <a href="">Log in</a></p>
             </fieldset>
