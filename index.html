@@ -38,38 +38,40 @@
             <fieldset name="info" id="info">
                 <legend>Let's do this!</legend>
                 <div class="inputDiv">
-                    <label for="name">FIRST NAME</label>
-                    <input type="text" id="name" name="name">
+                    <label for="name">FIRST NAME *</label>
+                    <input type="text" id="name" name="name" minlength="2" maxlength="13" placeholder="Name" required>
                 </div>
 
                 <div class="inputDiv">
                     <label for="lastName">LAST NAME</label>
-                    <input type="text" id="lastName" name="lastName">
+                    <input type="text" id="lastName" name="lastName" minlength="2" maxlength="16">
                 </div>
 
                 <div class="inputDiv">
-                    <label for="email">EMAIL</label>
-                    <input type="email" id="email" name="email">
+                    <label for="email">EMAIL *</label>
+                    <input type="email" id="email" name="email" placeholder="email@email.com" required>
                 </div>
 
                 <div class="inputDiv">
                     <label for="phone">PHONE NUMBER</label>
-                    <input type="tel" id="phone" name="phone">
+                    <input type="tel" id="phone" name="phone" placeholder="0000000000" pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$">
                 </div>
 
                 <div class="inputDiv">
-                    <label for="password">PASSWORD</label>
-                    <input type="password" id="password" name="password">
+                    <label for="password">PASSWORD *</label>
+                    <input type="password" id="password" name="password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" placeholder="Min 8 with num upp low & special" required>
                 </div>
 
                 <div class="inputDiv">
-                    <label for="confirmPassword">CONFIRM PASSWORD</label>
-                    <input type="password" id="confirmPassword" name="confirmPassword">
+                    <label for="confirmPassword">CONFIRM PASSWORD *</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" required>
                 </div>
             </fieldset>
 
             <fieldset name="button" id="button">
-                <button type="submit" id="submit">Create Account</button>
+                <button type="submit" id="submitButton">Create Account</button>
+
+                <h5 id="alertInfo"></h5>
 
                 <p>Already have an account? <a href="">Log in</a></p>
             </fieldset>

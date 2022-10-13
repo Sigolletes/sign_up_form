@@ -8,12 +8,9 @@
 :root {
     font-family: 'Roboto Slab', serif;
 
-    --color1: black;
-    --color2: white;
+    --color1: rgb(229, 181, 78);
+    --color2: rgb(14, 47, 89);
     --color3: rgb(234, 221, 195);
-    --color4: green;
-    --color5: red;
-    --color6: rgb(14, 47, 89);
 }
 
 body {
@@ -33,6 +30,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
 }
 
 
@@ -71,24 +72,33 @@ h1 {
 
 #form {
     width: 70vw;
-    height: 100vh;
+    height: auto;
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    background-color: var(--color6);
+    background-color: var(--color2);
     color: var(--color3);
-    padding: 1% 3%;
+    padding: 2vh 5vw;
     overflow: auto;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    gap: 4vh;
 }
 
+
 #text {
-    display: flex;
-    flex-direction: column;
-    gap: 1vh;
+    display: block;
+    text-align: center;
+    margin-top: 5vh;
 }
 
 h3 {
-    font-size: clamp(12px, 3vmin, 18px);
+    font-size: clamp(12px, 3vw, 18px);
+}
+
+h3:first-child {
+    padding-bottom: 2vh;
 }
 
 #info {
@@ -97,16 +107,14 @@ h3 {
     justify-content: center;
     align-items: center;
     padding: 2vh 1vw 3vh 1vw;
-    gap: 1vh;
-    margin-top: 5%;
+    gap: 0.7vh;
     border-radius: 1vh;
     border: 4px double var(--color3);
-    font-size: clamp(10px, 2.7vmin, 18px);
-
+    font-size: clamp(10px, 2.7vw, 18px);
 }
 
 #info legend {
-    font-size: clamp(15px, 3vmin, 20px);
+    font-size: clamp(15px, 3vw, 20px);
 }
 
 .inputDiv {
@@ -115,8 +123,8 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 1%;
-    width: 90%;
+    gap: 0.5vh;
+    width: 50vw;
 }
 
 input {
@@ -124,6 +132,25 @@ input {
     background-color: var(--color3);
     border-radius: 1vh;
     width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+input:invalid {
+    border: 2px solid rgb(252, 128, 128);
+}
+
+input:valid {
+    border: 2px solid rgb(129, 163, 90);
+}
+
+input:focus {
+    border: 5px solid rgb(172, 210, 222);
+    box-shadow: 3px 3px 6px rgb(172, 210, 222);
+    background-color: rgb(240, 232, 216);
+}
+
+::placeholder {
+    color: rgb(116, 115, 115);
 }
 
 #button {
@@ -137,13 +164,15 @@ input {
     font-size: clamp(13px, 1.3vw, 20px);
 }
 
-#submit {
+#submitButton {
     font-size: clamp(13px, 1.3vw, 20px);
     padding: 1vh 1vw;
     border-radius: 1vh;
-    background-color: rgb(229, 181, 78);
+    background-color: var(--color1);
 }
 
 a {
     color: rgb(204, 143, 21);
 }
+
+
