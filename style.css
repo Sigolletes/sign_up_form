@@ -171,8 +171,11 @@ input:focus {
     background-color: var(--color1);
 }
 
-a {
+#log {
     color: rgb(204, 143, 21);
+    background-color: transparent;
+    border: none;
+    font-size: clamp(13px, 1.3vw, 20px);
 }
 
 .error {
@@ -201,6 +204,80 @@ a {
     margin-bottom: 3vh;
 }
 
+#logInDiv {
+    position: fixed;
+    z-index: 1;
+    background-color: var(--color1);
+    border: 5px double var(--color3);
+    border-radius: 1vh;
+    padding: 3vw;
+    top: 20%;
+    left: 10%;
+    width: 80%;
+    height: auto;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+    font-size: clamp(15px, 1.4vw, 50px);
+    text-align: center;
+}
+
+#logInDiv form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+}
+
+#logInDiv div {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+#logIn {
+    font-size: clamp(13px, 1.3vw, 20px);
+    padding: 1vw 3vw;
+    border-radius: 1vh;
+    background-color: var(--color3);
+    margin: 1.4vh 0;
+}
+
+#logInDiv input {
+    text-align: center;
+    font-size: clamp(13px, 1.3vw, 20px);
+}
+
+#hint {
+    color: rgb(5, 112, 93);
+    font-size: clamp(16px, 1.7vw, 25px);
+    text-shadow: 1px 1px rgb(136, 239, 205);
+    margin-bottom: 2vh;
+    border: none;
+    background-color: transparent;
+}
+
+#hint:hover {
+    transform: scale(1.2);
+}
+
+i {
+    background-color: var(--color3);
+
+}
+
+i:hover {
+    border: 1px solid rgb(204, 204, 98);
+    border-radius: 4px;
+    box-shadow: 3px 3px 6px rgb(238, 240, 191);
+    background-color: rgb(240, 232, 216);
+    transform: scale(1.7);
+}
+
+#psswrd {
+    margin-bottom: 3vh;
+}
 
 
 
@@ -243,11 +320,11 @@ a {
 
     .error {
         padding: 0.5vw;
-        width: 85vw;
+        width: 73vw;
     }
     
     .correct {
         padding: 0.5vw;
-        width: 85vw;
+        width: 73vw;
     }
 }

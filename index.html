@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
 
+    <link href='https://css.gg/corner-down-left.css' rel='stylesheet'>
+
     <title>Sign Up Form</title>
 </head>
 <body>
@@ -74,15 +76,34 @@
 
                 <button type="button" id="submitButton">Create Account</button>
 
-                <p>Already have an account? <a href="">Log in</a></p>
+                <p>Already have an account? <button type="button" id="log">Log in</button></p>
             </fieldset>
 
         </form>
 
     </div>
 
-    <div id="logIn">
-        
+    <div id="logInDiv">
+        <form action="#" method="post">
+
+            <div class="inputDiv">
+                <label for="userName">NAME *</label>
+                <input type="text" id="userName" name="userName" minlength="2" maxlength="13" pattern="Admin" required>
+            </div>
+
+            <div class="inputDiv">
+                <label for="psswrd">PASSWORD *</label>
+                <input type="password" id="psswrd" name="psswrd" required pattern="1234">
+            </div>
+
+            <h4 id="infoLog"></h4>
+
+            <button type="button" id="logIn">ENTER</button>
+        </form>
+
+        <p>You cannot enter?</p>
+        <button type="button" id="hint">Get a hint</button>
+        <button type="button" id="back"><i class="gg-corner-down-left"></i></button>
     </div>
 
     
