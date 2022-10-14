@@ -65,6 +65,7 @@ back.addEventListener("click", () => {
     infoLog.classList.remove("correct");
     infoLog.classList.remove("error");
     infoLog.textContent = "";
+    hint.innerText = "Get a hint";
 });
 
 hint.addEventListener("click", () => {
