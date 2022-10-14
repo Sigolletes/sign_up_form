@@ -51,13 +51,13 @@ body {
 }
 
 #logo img {
-    width: clamp(23px, 8vw, 80px);
+    width: clamp(32px, 8vw, 80px);
     height: auto;
 }
 
 h1 {
     font-family: 'Cinzel Decorative', cursive;
-    font-size: clamp(15px, 4vw, 50px);
+    font-size: clamp(24px, 4vw, 50px);
 }
 
 #photo p {
@@ -175,6 +175,79 @@ a {
     color: rgb(204, 143, 21);
 }
 
-h5 {
-    font-size: clamp(20px, 2vw, 50px);
+.error {
+    font-size: clamp(15px, 1.8vw, 50px);
+    color: rgb(245, 212, 212);
+    box-shadow: 3px 3px 10px 5px rgb(247, 40, 40);
+    background-color: rgb(111, 8, 8);
+    border-radius: 1vh;
+    border: 1px solid rgb(248, 81, 81);
+    padding: 0.5vw 1vw;
+    width: 50vw;
+    text-align: center;
+    margin-bottom: 3vh;
+}
+
+.correct {
+    font-size: clamp(15px, 1.8vw, 50px);
+    color: rgb(201, 246, 201);
+    box-shadow: 3px 3px 10px 5px rgb(172, 237, 93);
+    background-color: rgb(66, 109, 28);
+    border-radius: 1vh;
+    border: 1px solid rgb(201, 246, 201);
+    padding: 0.5vw 1vw;
+    width: 50vw;
+    text-align: center;
+    margin-bottom: 3vh;
+}
+
+
+
+
+@media only screen and (max-width: 450px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #photo {
+        width: 100vw;
+        height: 70px;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: auto;
+        bottom: auto;
+        left: auto;
+    }
+
+    #form {
+        width: 100vw;
+        height: auto;
+        position: sticky;
+        top: auto;
+        bottom: auto;
+        left: auto;
+    }
+
+    #logo {
+        width: 100vw;
+        height: 100%;
+        margin-top: 0;
+    }
+
+    #photo p {
+        display: none;
+    }
+
+    .error {
+        padding: 0.5vw;
+        width: 85vw;
+    }
+    
+    .correct {
+        padding: 0.5vw;
+        width: 85vw;
+    }
 }

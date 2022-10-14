@@ -31,11 +31,15 @@ submitButton.addEventListener("click", () => {
 
     if (check === true && pass === true) {
         alertInfo.innerText = "The account was created";
+        alertInfo.classList.add("correct");
     } else if (check === false && pass === false) {
         alertInfo.textContent = "Fulfill all the required parameters";
+        alertInfo.classList.add("error");
     } else if (check === true && pass === false) {
         alertInfo.innerHTML = "The passwords aren't the same";
+        alertInfo.classList.add("error");
     } else {
         alertInfo.textContent = "Fulfill all the required parameters";
+        alertInfo.classList.add("error");
     }
 });
